@@ -3,8 +3,32 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <tommy.naivecamer.Camera1Preview
+    <Button
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="wrap_content"
+        android:background="@color/colorAccent"
+        android:textColor="@android:color/white"
+        android:onClick="takePicture"
+        android:text="拍照"/>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <tommy.naivecamer.Camera1Preview
+            android:id="@+id/preview_camera"
+            android:layout_gravity="bottom"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </FrameLayout>
+
+
+    <ImageView
+        android:id="@+id/iv_picture"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"/>
 
 </RelativeLayout>
